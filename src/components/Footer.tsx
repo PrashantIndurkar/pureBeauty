@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
         alt=""
       />
       <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-PB_blue text-PB_white px-4 py-2 font-semibold hover:bg-PB_darkBlue transition duration-200">
-        <a href="/products"> Browse all Products</a>
+        <Link href="/products"> Browse all Products</Link>
       </button>
     </div>
   );

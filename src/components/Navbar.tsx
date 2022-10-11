@@ -9,9 +9,9 @@ const Navbar = () => {
         <Link href="/">
           <h1 className="text-xl font-playfairDisplay">
             Pure
-            <a href="/" className="font-semibold text-PB_darkBrown">
-              Beauty
-            </a>
+            <Link href="/" className="font-semibold text-PB_darkBrown">
+              <a>Beauty</a>
+            </Link>
           </h1>
         </Link>
       </div>
