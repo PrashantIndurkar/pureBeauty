@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BiChevronRight } from "react-icons/bi";
 import fetchProductType from "../utils/fetchProductType";
 
-const productsbytypes = ({ productTypeData }: any) => {
+const Productsbytypes = ({ productTypeData }: any) => {
   const [productTypes, setProductTypes] = useState(productTypeData);
   return (
     <>
@@ -48,7 +48,7 @@ const productsbytypes = ({ productTypeData }: any) => {
   );
 };
 
-export default productsbytypes;
+export default Productsbytypes;
 
 export const getStaticProps = async () => {
   const response = await fetchProductType();

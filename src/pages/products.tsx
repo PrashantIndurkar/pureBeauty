@@ -3,7 +3,7 @@ import fetchproducts from "../utils/fetchProducts";
 import { TbArrowNarrowRight, TbArrowNarrowLeft } from "react-icons/tb";
 import { GetServerSideProps } from "next";
 
-const products = ({ productsData }: any) => {
+const Products = ({ productsData }: any) => {
   const [pageNumber, setPageNumber] = useState<number>(1);
   return (
     <>
@@ -18,7 +18,10 @@ const products = ({ productsData }: any) => {
       </div>
       <ul>
         <li>
-          <a href="" className="text-PB_blue cursor-pointer"> 1</a>
+          <a href="" className="text-PB_blue cursor-pointer">
+            {" "}
+            1
+          </a>
         </li>
       </ul>
       {/* <nav className="my-4 border-t border-PB_lightBrown px-4 flex items-center justify-between sm:px-0">
@@ -59,7 +62,7 @@ const products = ({ productsData }: any) => {
   );
 };
 
-export default products;
+export default Products;
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { params, req } = context;
   const response = await fetch(
