@@ -20,8 +20,7 @@ const Home = ({ categories }: Props) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header />
-      {/* products By Categories */}
-      {console.log(categories)}
+      {/* products By Categories COMPONENT*/}
       <ProductsByCategories categories={categories} />
 
       {/* Banner Company */}
