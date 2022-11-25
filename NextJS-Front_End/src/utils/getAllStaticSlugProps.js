@@ -3,7 +3,7 @@ export const getAllStaticSlugProps = async () => {
     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getAllStaticSlugProps`
   );
   const data = await response.json();
-  return data.allStaticSlugProps.map((index: any) => ({
+  return data.allStaticSlugProps.map((index) => ({
     params: { productSlug: index.slug.current },
   }));
 

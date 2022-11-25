@@ -25,6 +25,6 @@
     "src/pages/products/index.tsx",
     "src/pages/index.tsx",
     "src/utils/fetchBrands.tsx"
-  ],
+, "src/utils/fetchAllProducts.js", "src/utils/getAllStaticSlugProps.js", "src/utils/getCategories.js"  ],
   "exclude": ["node_modules"]
 }
