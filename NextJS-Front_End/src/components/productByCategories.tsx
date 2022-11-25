@@ -1,7 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 // import fetchProductType from "../utils/fetchProductType";
-import Card from "./Card";
 import { HiArrowSmRight } from "react-icons/hi";
 
 interface productByCategoriesProps {

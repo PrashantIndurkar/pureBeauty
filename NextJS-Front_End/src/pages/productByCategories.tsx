@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { BiChevronRight } from "react-icons/bi";
 
@@ -17,13 +18,15 @@ const ProductsByTypes = ({ productTypeData }: any) => {
       <div>
         <ul className="flex gap-x-4 tab_mx mobile_mx desktop_mx my-4 items-center ">
           <li>
-            <a href="/">Home</a>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
           </li>
           <BiChevronRight className="inline h-4 w-4" />
           <li>
-            <a href="/productbytypes" className=" text-PB_darkBlue">
-              Product Types
-            </a>
+            <Link href="/productbytypes">
+              <a className=" text-PB_darkBlue">Product Types</a>
+            </Link>
           </li>
         </ul>
       </div>

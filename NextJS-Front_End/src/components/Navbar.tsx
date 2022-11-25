@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className=" md:tab_mx mobile_mx lg:desktop_mx h-[7vh] flex items-center justify-between shadow-sm bg-PB_white fixed w-full z-50 hover:h-[9vh] transition-all duration-300 ease-in-out">
         <div className="cursor-pointer">
           <Link href="/">
-            <a href="/" className="text-xl font-playfairDisplay">
+            <a className="text-xl font-playfairDisplay">
               Pure
               <span className="font-semibold text-PB_darkGreen">Beauty</span>
             </a>

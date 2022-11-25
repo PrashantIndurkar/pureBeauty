@@ -2,6 +2,7 @@ import React from "react";
 import { fetchAllProducts } from "../../utils/fetchAllProducts";
 import { GetStaticProps } from "next";
 import ProductCard from "../../components/ProductCard";
+import Link from "next/link";
 
 interface allProductsProps {
   allProducts: Product[];
@@ -23,10 +24,14 @@ const Products = ({ allProducts }: allProductsProps) => {
       <div className="my-4 font-medium md:tab_mx mobile_mx lg:desktop_mx xl:max-px-20">
         <ul className="flex gap-x-2 text-sm">
           <li>
-            <a href="/">Home</a>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
           </li>
           <li>
-            <a href="/products">/ Products</a>
+            <Link href="/products">
+              <a>/ Products</a>
+            </Link>
           </li>
         </ul>
       </div>
