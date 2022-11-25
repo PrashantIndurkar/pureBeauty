@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { fetchAllProducts } from "../../utils/fetchAllProducts";
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetStaticProps } from "next";
 import ProductCard from "../../components/ProductCard";
-import { urlFor } from "../../../sanity";
 
 interface allProductsProps {
   allProducts: Product[];

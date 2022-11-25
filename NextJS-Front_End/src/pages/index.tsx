@@ -1,6 +1,5 @@
-import type { GetServerSideProps, NextPage } from "next";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
-import { useState } from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductsByCategories from "../components/productByCategories";
