@@ -16,6 +16,15 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs", "src/pages/products.tsx", "src/pages/index.tsx", "src/utils/fetchBrands.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.mjs",
+    "src/pages/products/index.tsx",
+    "src/pages/index.tsx",
+    "src/utils/fetchBrands.tsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -9,7 +9,7 @@ const Banner = () => {
       <div className="flex flex-col md:flex-row justify-center items-center py-12">
         <Image
           className=" object-contain"
-          src="https://images.unsplash.com/photo-1593034108065-b876d0c41f59"
+          src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e"
           alt=""
           width={500}
           height={500}

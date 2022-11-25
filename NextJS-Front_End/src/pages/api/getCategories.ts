@@ -20,6 +20,5 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const categories = await sanityClient.fetch(query);
-  console.log("GET categories");
   res.status(200).json({ categories });
 }
