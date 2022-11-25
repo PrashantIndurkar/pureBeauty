@@ -4,7 +4,7 @@ import { useState } from "react";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductsByCategories from "../components/productByCategories";
-import fetchBrands from "../utils/fetchBrands";
+import Selling from "../components/Selling";
 import { fetchCategories } from "../utils/getCategories";
 
 interface Props {
@@ -20,12 +20,12 @@ const Home = ({ categories }: Props) => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Header />
-      {/* products By Categories */}
-      {console.log(categories)}
+      {/* products By Categories COMPONENT*/}
       <ProductsByCategories categories={categories} />
 
       {/* Banner Company */}
       <Banner />
+      <Selling />
       {/* products By Brands */}
       {/* <ProductsByBrand /> */}
     </>

@@ -3,19 +3,14 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { sanityClient } from "../../../sanity";
 
 const query = groq`*[_type == "product"]{
-    _id,
-    category,
-    image,
-    price,
-    title,
-    slug
-  }
-  `;
+  slug,
+}
+`;
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const allProducts = await sanityClient.fetch(query);
-  res.status(200).json({ allProducts });
+  const allStaticSlugProps = await sanityClient.fetch(query);
+  res.status(200).json({ allStaticSlugProps });
 }

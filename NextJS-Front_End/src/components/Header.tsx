@@ -1,72 +1,87 @@
 import React from "react";
-import vector from "../../public/Vector.png";
+import header1 from "../../public/header2.jpg";
+import header2 from "../../public/header3.jpg";
+import Image from "next/image";
 
-import product1 from "../../public/product1.svg";
-import product2 from "../../public/product2.svg";
-import product3 from "../../public/product3.svg";
+// motion
+import { motion } from "framer-motion";
+
+// motion variants
+const fadeVariants = {
+  initial: { opacity: 0, y: 50 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.2,
+      stiffness: 100,
+    },
+  },
+};
 
 const Header = () => {
+  // Grow up your skin with natural Products
+  // all Products are 100% natural, organic and vegan friendly.
   return (
-    <header className="tab_mx mobile_mx desktop_mx  bg-PB_background">
-      <div className="h-[93vh] flex flex-col items-center justify-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-playfairDisplay text-center mb-6 md:mb-14 w-4/6 lg:w-2/4">
-          Grow up your skin with natural Products
-        </h1>
-        {/* div for md */}
-        <div className="flex flex-col md:flex-row  items-center md:w-full overflow-hidden justify-center ">
-          <div className="hidden md:inline w-4/12 ">
-            <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus culpa alias, aliquam nulla deleniti et voluptates quae
-              laudantium fugit ipsam.
-            </h1>
-            <div className="flex gap-x-4 mt-12">
-              <img
-                src={product2.src}
-                alt="bestSellingProduct"
-                className="h-20 cursor-pointer"
-              />
-              <div>
-                <h1 className="cursor-pointer">Sun Skin</h1>
-                <p className="text-PB_lightBrown font-bold">$12.0</p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-10 sm:mt-0 lg:w-1/2 flex">
-            <img
-              src={vector.src}
-              alt="makeup"
-              className="h-56  sm:h-64 lg:h-80"
-            />
-          </div>
-          <div className="flex flex-col gap-y-4 mt-10 ">
-            <h2 className="font-semibold tracking-wide text-lg">
-              Best selling Products
-            </h2>
-            <div className="flex gap-x-4 ">
-              <img
-                src={product1.src}
-                alt="bestSellingProduct"
-                className="h-20 cursor-pointer"
-              />
-              <div>
-                <h1 className="cursor-pointer">Sun Skin</h1>
-                <p className="text-PB_lightBrown font-bold">$12.0</p>
-              </div>
-            </div>
-            <div className="flex gap-x-4 cursor-pointer">
-              <img
-                src={product3.src}
-                alt="bestSellingProduct"
-                className="h-20"
-              />
-              <div>
-                <h1 className="cursor-pointer">Curology cream</h1>
-                <p className="text-PB_lightBrown font-bold">$20.0</p>
-              </div>
-            </div>
-          </div>
+    <header className="pt-10 md:tab_mx mobile_mx lg:desktop_mx xl:max-px-20 bg-PB_background">
+      <div className="relative h-[90vh] flex justify-center items-center">
+        <div className="w-1/2 text-center">
+          <h1 className="text-5xl font-playfairDisplay z-10 font-light text-PB_black tracking-wide leading-normal ">
+            Grow up Your Skin with{" "}
+            <span className="text-PB_darkGreen font-black">
+              Natural Products
+            </span>
+          </h1>
+          <p className="text-sm pt-4 font-inter">
+            All Products are 100% Natural, Organic and Vegan friendly.
+          </p>
+          {/* BUTTON */}
+          <motion.div
+            className="mt-8"
+            whileHover={{ scale: 1.07 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <a
+              href="/products"
+              className="relative inline-block px-4 py-2 font-medium group"
+            >
+              <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-[#c0cab4] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full bg-white transition duration-50000 ease-out border-2 border-PB_darkGreen group-hover:bg-PB_darkGreen"></span>
+              <span className="font-inter font-medium text-sm relative text-PB_black group-hover:text-PB_white">
+                shop now
+              </span>
+            </a>
+          </motion.div>
         </div>
+        {/* Images */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: {
+              when: "beforeChildren",
+              staggerChildren: 0.3,
+            },
+          }}
+        >
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={fadeVariants}
+            className="absolute top-[40%] right-0"
+          >
+            <img src={header2.src} alt="Header Image 1" className="h-[50vh]" />
+          </motion.div>
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={fadeVariants}
+            className="h-fit w-fit bg-PB_white absolute top-14 left-14"
+          >
+            <img src={header1.src} className="h-[50vh]" alt="Header Image 2" />
+          </motion.div>
+        </motion.div>
       </div>
     </header>
   );
