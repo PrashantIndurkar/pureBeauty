@@ -32,9 +32,15 @@ const ProductDetails = ({ productSlug, getProductBySlug }: any) => {
           <h2 className="font-bold text-xl mb-4 md:mb-4">
             &#8377;{getProductBySlug[0].price}
           </h2>
-          <button className="bg-PB_black text-sm md:text-base text-PB_white px-2 py-1 font-inter font-medium hover:bg-[#232324]">
+
+          {/* ------------------------------ Buy Now BUTTON ---------------------------------- */}
+          <button
+            onClick={() => console.log("added to cart")}
+            className="bg-PB_black text-sm md:text-base text-PB_white px-2 py-1 font-inter font-medium hover:bg-[#232324]"
+          >
             Buy now <BsHandbag className="ml-2 inline text-sm mb-0.5" />
           </button>
+
           <div className=" flex  mt-4">
             <input
               type="number"

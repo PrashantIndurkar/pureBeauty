@@ -38,21 +38,15 @@ const Header = () => {
             All Products are 100% Natural, Organic and Vegan friendly.
           </p>
           {/* BUTTON */}
-          <motion.div
-            className="mt-8"
-            whileHover={{ scale: 1.07 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <Link href="/products">
-              <a className="relative inline-block px-4 py-2 font-medium group">
-                <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-[#c0cab4] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                <span className="absolute inset-0 w-full h-full bg-white transition duration-50000 ease-out border-2 border-PB_darkGreen group-hover:bg-PB_darkGreen"></span>
-                <span className="font-inter font-medium text-sm relative text-PB_black group-hover:text-PB_white">
-                  shop now
-                </span>
-              </a>
-            </Link>
-          </motion.div>
+          <Link href="/products">
+            <a className="relative mt-8 inline-block px-4 py-2 font-medium group">
+              <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-[#c0cab4] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full bg-white transition duration-50000 ease-out border-2 border-PB_darkGreen group-hover:bg-PB_darkGreen"></span>
+              <span className="font-inter font-medium text-sm relative text-PB_black group-hover:text-PB_white">
+                shop now
+              </span>
+            </a>
+          </Link>
         </div>
         {/* Images */}
         <motion.div
