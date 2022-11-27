@@ -1,9 +1,11 @@
 import modalReducer from "./../features/modalSlice";
+import basketReducer from "../features/basketSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
   reducer: {
     modal: modalReducer,
+    basketProducts: basketReducer,
   },
 });
 

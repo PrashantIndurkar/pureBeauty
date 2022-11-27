@@ -1,9 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { HiMenuAlt2 } from "react-icons/hi";
-import { BsBagX, BsHandbag } from "react-icons/bs";
+import { BsHandbag } from "react-icons/bs";
 import {
-  IoBagHandle,
   IoBagHandleOutline,
   IoBagRemoveOutline,
   IoCloseCircleOutline,
@@ -12,9 +11,16 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { setOpen } from "../redux/features/modalSlice";
 import { RootState } from "../redux/app/store";
+import { urlFor } from "../../sanity";
+import { basketItems } from "../redux/features/basketSlice";
 
 const Navbar = () => {
-  const isOpen = useSelector((state: any) => state.modal.open);
+  const isOpen = useSelector((state: RootState) => state.modal.open);
+  const totalItems = useSelector(basketItems);
+  const basketProducts = useSelector(
+    (state: any) => state.basketProducts.items
+  );
+  console.log(basketProducts);
   const dispatch = useDispatch();
   return (
     <>
@@ -49,7 +55,7 @@ const Navbar = () => {
             ) : (
               <IoBagHandleOutline className="inline text-xl" />
             )}
-            <sup className="font-bold ml-0.5">0</sup>
+            <sup className="font-bold ml-0.5">{totalItems.length}</sup>
           </div>
         </div>
         <div className="md:hidden">
@@ -58,7 +64,7 @@ const Navbar = () => {
 
         {/* modal */}
         {isOpen && (
-          <div className="w-72 absolute bg-PB_white right-4 md:right-6 lg:right-16 h-fit max-h-[80vh] top-[7vh] rounded-lg shadow-lg p-4 overflow-scroll scrollbar-hide">
+          <div className="w-72 absolute bg-PB_white right-4 md:right-6 lg:right-16 h-fit max-h-[80vh] top-[8vh] rounded-lg shadow-lg p-4 overflow-scroll scrollbar-hide">
             <h1 className=" font-bold font-inter text-lg md:text-xl mb-4">
               My Cart
             </h1>
@@ -68,14 +74,14 @@ const Navbar = () => {
                 {/* product image */}
                 <div className="flex-shrink-0 h-full">
                   <img
-                    src="https://media.sugarcosmetics.com/upload/Brow.jpg"
+                    src={urlFor(basketProducts[0].image[0]).url()}
                     className="w-max-full h-full rounded-lg "
                   ></img>
                 </div>
                 {/* product info */}
                 <div className="flex w-fit  overflow-hidden break-words flex-col justify-between">
                   <h1 className="h-full w-fit  overflow-hidden text-xs font-semibold  break-words font-inter">
-                    Matte Attack Treansferproff Lipstick
+                    {basketProducts[0].title}
                   </h1>
                   <div className="flex mt-1 items-center space-x-1.5 ">
                     <AiFillMinusCircle className="text-lg cursor-pointer text-PB_lightBrown hover:text-PB_darkBrown transition duration-100" />
@@ -86,7 +92,9 @@ const Navbar = () => {
                 {/* product delete & price */}
                 <div className="flex flex-col justify-between items-end ">
                   <IoCloseCircleOutline className="text-xl cursor-pointer text-PB_darkBrown hover:text-PB_darkBrown" />
-                  <h1 className="font-bold text-sm">&#8377;499</h1>
+                  <h1 className="font-bold text-sm">
+                    &#8377;{basketProducts[0].price}
+                  </h1>
                 </div>
               </div>
             </div>
