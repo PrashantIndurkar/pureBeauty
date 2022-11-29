@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { fetchAllProducts } from "../../utils/fetchAllProducts";
 import { GetStaticProps } from "next";
 import ProductCard from "../../components/ProductCard";
 import Link from "next/link";
+import Head from "next/head";
+import { useDispatch } from "react-redux";
+import modalSlice, { closeBasket } from "../../redux/features/modalSlice";
+import { useSelector } from "react-redux";
 
 interface allProductsProps {
   allProducts: Product[];
 }
 
 const Products = ({ allProducts }: allProductsProps) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(closeBasket());
+  }, []);
   return (
     <>
+      <Head>
+        <title>Products - pureBeauty</title>
+        <link rel="icon" href="/favicon.png" />
+      </Head>
       <div className="pt-10 relative">
         <img
           className="w-full h-[40vh] md:h-[50vh] brightness-75 object-cover"
@@ -135,7 +147,7 @@ const Products = ({ allProducts }: allProductsProps) => {
             </div>
           </div>
         </div> */}
-        <div className="w-full  grid grid-cols-1 md:grid-cols-2 justify-items-center items-center lg:justify-items-center lg:grid-cols-4 gap-y-8 lg:gap-y-20">
+        <div className="w-full  grid grid-cols-1 md:grid-cols-2 justify-items-center items-center lg:justify-items-center lg:grid-cols-4 gap-y-8 lg:gap-y-24">
           {allProducts.map((product: Product) => {
             return <ProductCard product={product} key={product._id} />;
           })}

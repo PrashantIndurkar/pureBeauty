@@ -30,7 +30,7 @@ const Header = () => {
         <div className="w-1/2 text-center">
           <h1 className="text-5xl font-playfairDisplay z-10 font-light text-PB_black tracking-wide leading-normal ">
             Grow up Your Skin with{" "}
-            <span className="text-PB_darkGreen font-black">
+            <span className="text-PB_darkGreen font-black font-inter">
               Natural Products
             </span>
           </h1>
@@ -39,10 +39,20 @@ const Header = () => {
           </p>
           {/* BUTTON */}
           <Link href="/products">
-            <a className="relative mt-8 inline-block px-4 py-2 font-medium group">
+            {/* <a className="relative mt-8 inline-block px-4 py-2 font-medium group">
               <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-[#c0cab4] group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
               <span className="absolute inset-0 w-full h-full bg-white transition duration-50000 ease-out border-2 border-PB_darkGreen group-hover:bg-PB_darkGreen"></span>
               <span className="font-inter font-medium text-sm relative text-PB_black group-hover:text-PB_white">
+                shop now
+              </span>
+            </a> */}
+            <a
+              href="#_"
+              className="relative inline-block px-4 py-2 font-medium group font-inter mt-4"
+            >
+              <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-PB_green group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full bg-white border-2 border-PB_darkGreen group-hover:bg-PB_darkGreen"></span>
+              <span className="relative text-PB_black group-hover:text-white">
                 shop now
               </span>
             </a>

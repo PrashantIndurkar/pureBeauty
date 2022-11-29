@@ -5,6 +5,8 @@ import { urlFor } from "../../sanity";
 import { useDispatch } from "react-redux";
 import { addToBasket } from "../redux/features/basketSlice";
 import toast from "react-hot-toast";
+import { motion } from "framer-motion";
+
 interface ProductCardProps {
   product: Product;
 }
@@ -21,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
 
   return (
     <>
-      <div className="flex text-center flex-col w-56 " key={product._id}>
+      <div className="flex text-center flex-col w-56 h-fit" key={product._id}>
         <a href={`/products/${product.slug.current}`}>
           <Image
             src={urlFor(product.image[0]).url()}
@@ -31,15 +33,18 @@ const ProductCard = ({ product }: ProductCardProps) => {
           />
         </a>
 
-        <h1 className="mt-4 text-sm ">{product.title}</h1>
-        <p className="font-bold mt-4 text-lg">&#8377;{product.price}</p>
+        <div className="flex flex-col gap-y-3 justify-between mt-4">
+          <h1 className="text-sm font-inter truncate ...">{product.title}</h1>
+          <p className="font-bold mt-2 text-lg">&#8377;{product.price}</p>
+        </div>
 
-        <button
+        <motion.button
+          whileTap={{ scale: 0.95 }}
           onClick={addItemToBasket}
-          className="mt-4 bg-PB_black hover:bg-[#1c1c1c] text-PB_white  align-middle w-full text-sm rounded-md py-1.5 font-medium"
+          className="mt-4 bg-PB_black hover:bg-[#1c1c1c] text-PB_white  align-middle w-full text-sm rounded-md py-1.5 font-medium "
         >
           Add to Cart
-        </button>
+        </motion.button>
       </div>
     </>
   );

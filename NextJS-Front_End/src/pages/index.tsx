@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import type { GetServerSideProps } from "next";
+
 import Head from "next/head";
+import { useDispatch } from "react-redux";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import ProductsByCategories from "../components/productByCategories";
 import Selling from "../components/Selling";
+import { closeBasket } from "../redux/features/modalSlice";
 import { fetchCategories } from "../utils/getCategories";
 
 interface Props {
@@ -11,6 +15,10 @@ interface Props {
 }
 
 const Home = ({ categories }: Props) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(closeBasket());
+  }, []);
   return (
     <>
       <Head>

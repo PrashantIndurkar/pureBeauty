@@ -21,6 +21,8 @@ module.exports = {
       PB_darkBlue: "#6458e6",
       PB_darkGreen: "#66815b",
       PB_green: "#c0cab4",
+      PB_gray: "#e8eaed",
+      PB_darkGray: "#7d7d7d",
     },
   },
   plugins: [],

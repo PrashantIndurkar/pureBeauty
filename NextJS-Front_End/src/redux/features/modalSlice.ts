@@ -12,12 +12,15 @@ export const modalSlice = createSlice({
   name: "modal",
   initialState,
   reducers: {
-    setOpen: (state) => {
-      state.open = !state.open;
+    openBasket: (state) => {
+      state.open = true;
+    },
+    closeBasket: (state) => {
+      state.open = false;
     },
   },
 });
 
 // Selectors
-export const { setOpen } = modalSlice.actions;
+export const { openBasket, closeBasket } = modalSlice.actions;
 export default modalSlice.reducer;
