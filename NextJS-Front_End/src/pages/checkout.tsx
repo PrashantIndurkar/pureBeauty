@@ -111,6 +111,7 @@ const Checkout = () => {
                     <ul
                       role="list"
                       className="border-t border-PB_green divide-y divide-PB_gray"
+                      key={key}
                     >
                       <li className="flex py-6 sm:py-10 items-center">
                         <div className="flex-shrink-0">

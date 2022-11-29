@@ -20,7 +20,7 @@ export const basketSlice = createSlice({
       const index = state.items.findIndex(
         (basketItem) => basketItem._id === action.payload.id
       );
-      let newBasket = [...state.items];
+      const newBasket = [...state.items];
 
       if (index >= 0) {
         newBasket.splice(index, 1);
