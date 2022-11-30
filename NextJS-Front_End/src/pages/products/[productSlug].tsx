@@ -84,6 +84,7 @@ const ProductDetails = ({ productSlug, getProductBySlug }: any) => {
 export const getStaticPaths = async () => {
   const paths = await getAllStaticSlugProps();
 
+  console.log(paths);
   return {
     paths,
     fallback: true,
