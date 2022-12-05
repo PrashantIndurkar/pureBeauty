@@ -161,7 +161,9 @@ export default Products;
 
 // Get Server Side Props NEXT.js
 
-export const getStaticProps: GetStaticProps<allProductsProps> = async () => {
+export const getServerSideProps: GetStaticProps<
+  allProductsProps
+> = async () => {
   const allProducts = await fetchAllProducts();
   return {
     props: {
