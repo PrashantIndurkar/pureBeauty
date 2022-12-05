@@ -22,7 +22,7 @@ const ProductDetails = ({ productSlug, getProductBySlug }: any) => {
       position: "top-right",
     });
   };
-  console.log("product", getProductBySlug);
+  // console.log("product", getProductBySlug);
   return (
     <>
       <Head>
@@ -81,18 +81,26 @@ const ProductDetails = ({ productSlug, getProductBySlug }: any) => {
   );
 };
 
-export const getStaticPaths = async () => {
-  const paths = await getAllStaticSlugProps();
+// export const getStaticPaths = async () => {
+//   const response = await fetch(
+//     `${process.env.NEXT_PUBLIC_BASE_URL}/api/getAllStaticSlugProps`
+//   );
+//   const data = await response.json();
+//   // const paths;
+//   const paths = data.allStaticSlugProps.map((index: any) => ({
+//     params: { productSlug: index.slug.current },
+//   }));
 
-  console.log(paths);
-  return {
-    paths,
-    fallback: true,
-  };
-};
+//   // console.log(paths);
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
 
-export const getStaticProps = async (context: any) => {
+export const getServerSideProps = async (context: any) => {
   const productSlug = context.params.productSlug;
+  console.log("productSlug", productSlug);
   const getProductBySlug = await sanityClient.fetch(query, {
     productSlug,
   });

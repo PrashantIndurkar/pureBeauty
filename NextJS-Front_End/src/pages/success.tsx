@@ -27,7 +27,6 @@ const Success = ({ products }: Props) => {
 
   //END combining the products with the same id
 
-  console.log(products);
   const router = useRouter();
   const { session_id } = router.query;
 
