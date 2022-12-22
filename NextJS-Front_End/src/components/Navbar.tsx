@@ -18,21 +18,21 @@ const Navbar = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <nav className=" md:tab_mx mobile_mx lg:desktop_mx h-[7vh] flex items-center justify-between shadow-sm bg-PB_white fixed w-full z-50 hover:h-[9vh] transition-all duration-300 ease-in-out">
+      <nav className=" md:tab_mx mobile_mx lg:desktop_mx h-[8vh] flex items-center justify-between bg-[#fefdfb]  fixed w-full z-50 hover:h-[10vh] transition-all duration-300 ease-in-out">
         <div className="cursor-pointer">
           <Link href="/">
-            <a className="text-xl font-playfairDisplay">
+            <a className="text-xl font-playfairDisplay text-PB_black tracking-wide">
               Pure
               <span className="font-semibold text-PB_darkGreen">Beauty</span>
             </a>
           </Link>
         </div>
-        <div className="hidden md:flex items-center text-xs font-medium gap-x-8 lg:gap-x-12 font-inter">
+        <div className="hidden md:flex items-center text-xs font-medium gap-x-8 lg:gap-x-12 font-inter text-PB_black  tracking-wide">
           <Link href="/">
-            <a className="hover:text-PB_darkGreen  ">Home</a>
+            <a className="hover:text-PB_darkGreen ">Home</a>
           </Link>
           <Link href="/products">
-            <a className="hover:text-PB_darkGreen  ">Products</a>
+            <a className="hover:text-PB_darkGreen ">Products</a>
           </Link>
           <Link href="/">
             <a className="hover:text-PB_darkGreen  ">About</a>

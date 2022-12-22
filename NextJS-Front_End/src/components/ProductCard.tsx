@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { urlFor } from "../../sanity";
 
 import { useDispatch } from "react-redux";
@@ -13,6 +13,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
 
   const addItemToBasket = () => {
     dispatch(addToBasket(product));

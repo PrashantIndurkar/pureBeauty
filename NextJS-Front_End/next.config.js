@@ -5,6 +5,7 @@ module.exports = {
       "images.unsplash.com",
       "cdn.sanity.io",
       "www.freelogovectors.net",
+      "images.pexels.com",
     ],
   },
 };

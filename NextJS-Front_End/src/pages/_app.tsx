@@ -5,8 +5,17 @@ import Footer from "../components/Footer";
 import { store } from "../redux/app/store";
 import { Provider } from "react-redux";
 import { Toaster } from "react-hot-toast";
+import LoadingBar from "react-top-loading-bar";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
+  const [progress, setProgress] = useState(0);
+  const router = useRouter();
+  useEffect(() => {
+    router.events.on("routeChangeStart", () => [setProgress(40)]);
+    router.events.on("routeChangeComplete", () => [setProgress(100)]);
+  });
   return (
     <Provider store={store}>
       <Toaster
@@ -31,6 +40,14 @@ const MyApp: AppType = ({ Component, pageProps }) => {
             },
           },
         }}
+      />
+      <LoadingBar
+        color="#66815b"
+        onLoaderFinished={() => setProgress(0)}
+        waitingTime={500}
+        height={3}
+        progress={progress}
+        transitionTime={150}
       />
       <Navbar />
       <Component {...pageProps} />
