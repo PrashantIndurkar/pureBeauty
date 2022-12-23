@@ -53,7 +53,8 @@ const Products = ({ allProducts }: allProductsProps) => {
       </div>
       {/* PRODUCTS LIST */}
       <div className="lg:flex my-12">
-        <div className="bg-PB_background w-1/4 h-fit mx-8">
+        {/* Filter */}
+        {/* <div className="bg-PB_background w-1/4 h-fit mx-8">
           <h1 className="ml-4 font-bold lg:text-xl mt-2">Filters</h1>
           <div className="m-4">
             <div>
@@ -150,14 +151,14 @@ const Products = ({ allProducts }: allProductsProps) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="w-full  grid grid-cols-1 md:grid-cols-2 justify-items-center items-center lg:justify-items-center lg:grid-cols-4 gap-y-8 lg:gap-y-24">
           {allProducts.map((product: Product) => {
             return (
               <ProductCard
                 product={product}
                 key={product._id}
-                loading={loading}
+                // loading={loading}
               />
             );
           })}
