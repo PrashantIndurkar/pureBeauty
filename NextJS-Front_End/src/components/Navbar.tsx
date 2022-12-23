@@ -23,7 +23,9 @@ const Navbar = () => {
           <Link href="/">
             <a className="text-xl font-playfairDisplay text-PB_black tracking-wide">
               Pure
-              <span className="font-semibold text-PB_darkGreen">Beauty</span>
+              <span className="font-semibold font-inter text-PB_darkGreen">
+                Beauty
+              </span>
             </a>
           </Link>
         </div>
