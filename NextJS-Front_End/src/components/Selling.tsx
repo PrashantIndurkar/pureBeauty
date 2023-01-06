@@ -7,7 +7,7 @@ import { MdLocalShipping } from "react-icons/md";
 const Selling = () => {
   // Be close to nature using natural Products
   return (
-    <div className="md:tab_mx mobile_mx lg:desktop_mx py-12">
+    <div className="md:tab_mx mobile_mx lg:desktop_mx font-inter py-12">
       <h1 className="mt-12 lg:mt-24 text-center font-bold font-inter tracking-wider sm:text-lg md:text-xl lg:text-2xl">
         Buy from Retailers
       </h1>

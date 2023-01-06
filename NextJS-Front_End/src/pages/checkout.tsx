@@ -47,7 +47,7 @@ const Checkout = () => {
 
   // Strip Checkout Session
   const createCheckoutSession = async () => {
-    console.log("createCheckoutSession");
+    // console.log("createCheckoutSession");
     setLoading(true);
     const checkoutSession: Stripe.Checkout.Session = await fetchPostJSON(
       "/api/create-checkout-session",
@@ -198,7 +198,7 @@ const Checkout = () => {
                             Order total
                           </dt>
                           <dd className="text-base font-medium text-gray-900">
-                            &#8377;112.32
+                            &#8377;{cartItems[0]?.price! + 5 + 8.32}
                           </dd>
                         </div>
                       </dl>
