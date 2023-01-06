@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import { IoCloseCircleOutline } from "react-icons/io5";
@@ -12,13 +13,16 @@ interface Props {
 }
 
 const BasketItemCard = ({ items, id }: Props) => {
+  // console.log("items form card", items);
   const dispatch = useDispatch();
+
   const removeItemFromBasket = () => {
     dispatch(removeFromBasket({ id }));
     toast.error(`${items[0]?.title} Removed From cart`, {
       position: "bottom-right",
     });
   };
+
   return (
     <div className="relative space-y-4 py-4">
       <div className="flex h-24 w-full gap-x-4">

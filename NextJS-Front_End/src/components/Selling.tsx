@@ -8,7 +8,7 @@ const Selling = () => {
   // Be close to nature using natural Products
   return (
     <div className="md:tab_mx mobile_mx lg:desktop_mx py-12">
-      <h1 className="text-center font-bold font-inter tracking-wider sm:text-lg md:text-xl lg:text-2xl">
+      <h1 className="mt-12 lg:mt-24 text-center font-bold font-inter tracking-wider sm:text-lg md:text-xl lg:text-2xl">
         Buy from Retailers
       </h1>
       <div className="flex justify-center gap-x-6 mt-6  lg:gap-x-12 ">
@@ -54,7 +54,7 @@ const Selling = () => {
           />
         </div>
       </div>
-      <div className="mt-12  lg:mt-16 border text-xs font-bold font-inter justify-center items-center border-PB_darkBrown flex tracking-wide">
+      <div className="mt-12  lg:mt-24 border text-xs font-bold font-inter justify-center items-center border-PB_darkBrown flex tracking-wide">
         <div className="border-r flex justify-center items-center py-3 border-PB_darkBrown w-full gap-x-2 px-2">
           <BiMoney className="inline text-[#985e2f] text-xl lg:text-2xl" />
           <h2 className="font-medium">

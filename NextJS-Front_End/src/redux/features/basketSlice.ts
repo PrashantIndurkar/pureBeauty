@@ -1,5 +1,6 @@
 import { RootState } from "./../app/store";
 import { createSlice } from "@reduxjs/toolkit";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 interface basketProduct {
   items: Product[];

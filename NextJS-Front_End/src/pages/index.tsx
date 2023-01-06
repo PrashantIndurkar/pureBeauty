@@ -28,10 +28,11 @@ const Home = ({ categories }: Props) => {
       </Head>
       <Header />
       {/* products By Categories COMPONENT*/}
-      <ProductsByCategories categories={categories} />
+      {/* <ProductsByCategories categories={categories} /> */}
+      {/* {console.log(categories)} */}
 
       {/* Banner Company */}
-      <Banner />
+      {/* <Banner /> */}
       <Selling />
       {/* products By Brands */}
       {/* <ProductsByBrand /> */}
@@ -41,13 +42,13 @@ const Home = ({ categories }: Props) => {
 
 export default Home;
 
-// SERVER Side props NEXT.js
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const categories = await fetchCategories();
+// // SERVER Side props NEXT.js
+// export const getServerSideProps: GetServerSideProps<Props> = async () => {
+//   const categories = await fetchCategories();
 
-  return {
-    props: {
-      categories,
-    },
-  };
-};
+//   return {
+//     props: {
+//       categories,
+//     },
+//   };
+// };

@@ -13,7 +13,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   const addItemToBasket = () => {
     dispatch(addToBasket(product));
@@ -25,7 +25,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <>
       <div className="flex text-center flex-col w-56 h-fit" key={product._id}>
-        <a href={`/products/${product.slug.current}`}>
+        <a href={`/products/${product.slug.current}`} target="_blank">
           <Image
             src={urlFor(product.image[0]).url()}
             className="h-12 w-56 object-contain hover:scale-125 transition duration-300 cursor-pointer"

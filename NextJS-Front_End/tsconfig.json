@@ -24,7 +24,11 @@
     "**/*.mjs",
     "src/pages/products/index.tsx",
     "src/pages/index.tsx",
-    "src/utils/fetchBrands.tsx"
-, "src/utils/fetchAllProducts.js", "src/utils/getAllStaticSlugProps.js", "src/utils/getCategories.js"  ],
+    "src/utils/fetchBrands.tsx",
+    "src/utils/fetchAllProducts.js",
+    "src/utils/getAllStaticSlugProps.js",
+    "src/utils/getCategories.js",
+    "src/hooks/useLocalStorage.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -14,7 +14,7 @@ interface allProductsProps {
 }
 
 const Products = ({ allProducts }: allProductsProps) => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   const dispatch = useDispatch();
   useEffect(() => {

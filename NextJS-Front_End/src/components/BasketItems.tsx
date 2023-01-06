@@ -9,10 +9,13 @@ import { urlFor } from "../../sanity";
 import { basketItems, removeFromBasket } from "../redux/features/basketSlice";
 import emptyCart from "/public/undraw_Gift_box_re_vau4.png";
 import BasketItemCard from "./BasketItemCard";
+// import useLocalStorage from "../hooks/useLocalStorage";
+// import usePersistedState from "use-persisted-state-hook";
 
 // }
 const BasketItems = () => {
   const items = useSelector(basketItems);
+
   const [groupedItemsInBasket, setGroupedItemsInBasket] = useState(
     {} as { [key: string]: Product[] }
   );
