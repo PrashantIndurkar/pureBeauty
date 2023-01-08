@@ -14,7 +14,7 @@ const Selling = () => {
       <div className="flex justify-center gap-x-6 mt-6  lg:gap-x-12 ">
         <div className="relative w-12 h-12 md:w-28 md:h-20 mt-0.5 md:mt-2">
           <Image
-            alt="Brands Logo"
+            alt="Amazon Logo"
             className="h-full w-full cursor-pointer"
             src="https://www.freelogovectors.net/wp-content/uploads/2021/10/amazon-logo-freelogovectors.net_.png"
             layout="fill"
@@ -25,6 +25,7 @@ const Selling = () => {
         </div>
         <div className="relative w-12 h-12 md:w-28 md:h-20 ">
           <Image
+            alt="Flipkart Logo"
             className="h-full w-full cursor-pointer"
             src="https://www.freelogovectors.net/wp-content/uploads/2018/05/flipkart-logo.png"
             layout="fill"
@@ -35,6 +36,7 @@ const Selling = () => {
         </div>
         <div className="relative w-12 h-12 md:w-28 md:h-20 ">
           <Image
+            alt=" Myntra Logo"
             className="h-full w-full cursor-pointer"
             src="https://www.freelogovectors.net/svg08/myntra_logo-freelogovectors.net.svg"
             layout="fill"
@@ -46,6 +48,7 @@ const Selling = () => {
 
         <div className="relative w-12 h-12 md:w-28 md:h-20 ">
           <Image
+            alt="Nykaa Logo"
             className="h-full w-full cursor-pointer"
             src="https://www.freelogovectors.net/wp-content/uploads/2021/01/nykaa-logo-freelogovectors.net_.png"
             layout="fill"

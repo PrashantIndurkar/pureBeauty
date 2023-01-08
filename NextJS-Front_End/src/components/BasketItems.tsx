@@ -54,7 +54,7 @@ const BasketItems = () => {
         </>
       ) : (
         <div className="mb-6">
-          <img src={emptyCart.src} className="h-fit w-fit" alt="" />
+          <img alt="empty cart" src={emptyCart.src} className="h-fit w-fit" />
           <h1 className="text-center font-semibold font-inter mt-4 text-xl text-PB_black">
             Your Cart is Empty
           </h1>

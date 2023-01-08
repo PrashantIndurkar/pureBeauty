@@ -91,7 +91,11 @@ const Checkout = () => {
                   </h2>
                 ) : (
                   <div className="mb-6 flex flex-col justify-center items-center">
-                    <img src={emptyCart.src} className="h-72 w-fit" alt="" />
+                    <img
+                      alt="empty cart"
+                      src={emptyCart.src}
+                      className="h-72 w-fit"
+                    />
                     <h1 className="text-center font-semibold font-inter mt-4 text-2xl text-PB_black">
                       Your Cart is Empty 😢
                     </h1>
