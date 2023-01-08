@@ -13,7 +13,7 @@ interface Props {
 }
 
 const BasketItemCard = ({ items, id }: Props) => {
-  // console.log("items form card", items);
+  console.log("items form card", items);
   const dispatch = useDispatch();
 
   const removeItemFromBasket = () => {
@@ -29,6 +29,7 @@ const BasketItemCard = ({ items, id }: Props) => {
         {/* product image */}
         <div className="flex-shrink-0 h-full w-fit">
           <img
+            alt={items[0]?.title}
             src={urlFor(items[0]?.image[0]).url()}
             className="w-max-full h-full rounded-lg "
           ></img>

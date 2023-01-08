@@ -14,6 +14,7 @@ const Selling = () => {
       <div className="flex justify-center gap-x-6 mt-6  lg:gap-x-12 ">
         <div className="relative w-12 h-12 md:w-28 md:h-20 mt-0.5 md:mt-2">
           <Image
+            alt="Brands Logo"
             className="h-full w-full cursor-pointer"
             src="https://www.freelogovectors.net/wp-content/uploads/2021/10/amazon-logo-freelogovectors.net_.png"
             layout="fill"

@@ -28,6 +28,7 @@ const Header = () => {
   return (
     <header className="pt-10 md:tab_mx mobile_mx lg:desktop_mx xl:max-px-20 ">
       <Image
+        alt="Hero Image"
         src={header1}
         className="object-cover brightness-[.80] bg-[#eceae3]"
         layout="fill"
