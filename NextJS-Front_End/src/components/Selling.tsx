@@ -19,8 +19,8 @@ const Selling = () => {
             src="https://www.freelogovectors.net/wp-content/uploads/2021/10/amazon-logo-freelogovectors.net_.png"
             layout="fill"
             objectFit="contain"
-            width={400}
-            height={350}
+            // width={400}
+            // height={350}
           />
         </div>
         <div className="relative w-12 h-12 md:w-28 md:h-20 ">
@@ -30,8 +30,8 @@ const Selling = () => {
             src="https://www.freelogovectors.net/wp-content/uploads/2018/05/flipkart-logo.png"
             layout="fill"
             objectFit="contain"
-            width={400}
-            height={350}
+            // width={400}
+            // height={350}
           />
         </div>
         <div className="relative w-12 h-12 md:w-28 md:h-20 ">
@@ -41,8 +41,8 @@ const Selling = () => {
             src="https://www.freelogovectors.net/svg08/myntra_logo-freelogovectors.net.svg"
             layout="fill"
             objectFit="contain"
-            width={400}
-            height={350}
+            // width={400}
+            // height={350}
           />
         </div>
 
@@ -53,8 +53,8 @@ const Selling = () => {
             src="https://www.freelogovectors.net/wp-content/uploads/2021/01/nykaa-logo-freelogovectors.net_.png"
             layout="fill"
             objectFit="contain"
-            width={400}
-            height={350}
+            // width={400}
+            // height={350}
           />
         </div>
       </div>

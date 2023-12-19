@@ -10,11 +10,14 @@ const Footer1 = () => {
             <Link
               href="/"
               className="text-xl md:text-3xl lg:text-4xl font-playfairDisplay text-PB_black tracking-wide"
-              legacyBehavior>
-              Pure<span className="font-semibold font-inter text-PB_darkGreen">
-                Beauty
-              </span>
-
+              legacyBehavior
+            >
+              <>
+                Pure
+                <span className="font-semibold font-inter text-PB_darkGreen">
+                  Beauty
+                </span>
+              </>
             </Link>
           </div>
           <p className="text-sm leading-none text-gray-800 mt-4">

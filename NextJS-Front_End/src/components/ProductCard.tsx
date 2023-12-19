@@ -29,9 +29,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <Image
             alt={product?.title}
             src={urlFor(product.image[0]).url()}
-            className="h-12 w-56 object-contain hover:scale-125 transition duration-300 cursor-pointer"
-            height={200}
-            width={200}
+            className="object-contain hover:scale-105 transition duration-300 cursor-pointer"
+            height={400}
+            width={400}
           />
         </a>
 
