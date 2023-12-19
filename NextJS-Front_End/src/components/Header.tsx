@@ -2,11 +2,11 @@ import React from "react";
 // import header1 from "../../public/header2.jpg";
 import header2 from "../../public/header3.jpg";
 import header1 from "../../public/header3.png";
-import Image from "next/image";
+// import Image from "next/image";
 
 // motion
-import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 // motion variants
 const fadeVariants = {
