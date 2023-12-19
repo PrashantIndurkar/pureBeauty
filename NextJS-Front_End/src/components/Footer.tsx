@@ -7,13 +7,13 @@ const Footer1 = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
         <div className="flex flex-col flex-shrink-0">
           <div className="cursor-pointer mb-4">
-            <Link href="/">
-              <a className="text-xl md:text-3xl lg:text-4xl font-playfairDisplay text-PB_black tracking-wide">
-                Pure
-                <span className="font-semibold font-inter text-PB_darkGreen">
-                  Beauty
-                </span>
-              </a>
+            <Link
+              href="/"
+              className="text-xl md:text-3xl lg:text-4xl font-playfairDisplay text-PB_black tracking-wide">
+              Pure<span className="font-semibold font-inter text-PB_darkGreen">
+                Beauty
+              </span>
+
             </Link>
           </div>
           <p className="text-sm leading-none text-gray-800 mt-4">

@@ -34,34 +34,31 @@ const BasketItems = () => {
     // console.log("--------------------------------------");
   }, [items]);
 
-  return (
-    <>
-      {items.length > 0 ? (
-        <>
-          <div className="divide-y divide-PB_green mb-2">
-            {Object.entries(groupedItemsInBasket).map(([key, items]) => (
-              <BasketItemCard key={key} items={items} id={key} />
-            ))}
-          </div>
-
-          <button className="bg-PB_black text-PB_white w-full py-1 rounded-lg mt-6 flex justify-center items-center align-middle hover:bg-[#161515] shadow-md transition duration-100">
-            <Link href="checkout">
-              <a className="font-inter font-medium tracking-wide">
-                <BsHandbag className="mr-2 mb-1 inline" /> Place Order
-              </a>
-            </Link>
-          </button>
-        </>
-      ) : (
-        <div className="mb-6">
-          <img alt="empty cart" src={emptyCart.src} className="h-fit w-fit" />
-          <h1 className="text-center font-semibold font-inter mt-4 text-xl text-PB_black">
-            Your Cart is Empty
-          </h1>
+  return <>
+    {items.length > 0 ? (
+      <>
+        <div className="divide-y divide-PB_green mb-2">
+          {Object.entries(groupedItemsInBasket).map(([key, items]) => (
+            <BasketItemCard key={key} items={items} id={key} />
+          ))}
         </div>
-      )}
-    </>
-  );
+
+        <button className="bg-PB_black text-PB_white w-full py-1 rounded-lg mt-6 flex justify-center items-center align-middle hover:bg-[#161515] shadow-md transition duration-100">
+          <Link href="checkout" className="font-inter font-medium tracking-wide">
+
+            <BsHandbag className="mr-2 mb-1 inline" />Place Order
+          </Link>
+        </button>
+      </>
+    ) : (
+      <div className="mb-6">
+        <img alt="empty cart" src={emptyCart.src} className="h-fit w-fit" />
+        <h1 className="text-center font-semibold font-inter mt-4 text-xl text-PB_black">
+          Your Cart is Empty
+        </h1>
+      </div>
+    )}
+  </>;
 };
 
 export default BasketItems;

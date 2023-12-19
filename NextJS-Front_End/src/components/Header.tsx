@@ -45,13 +45,12 @@ const Header = () => {
             friendly .
           </p>
           {/* BUTTON */}
-          <Link href="/products">
-            <a
-              href="#_"
-              className="border border-PB_white rounded-full font-inter font-medium text-sm text-PB_white py-2 px-5 hover:text-[#b9f3b9] hover:border-[#b9f3b9] "
-            >
+          <Link
+            href="/products"
+            className="border border-PB_white rounded-full font-inter font-medium text-sm text-PB_white py-2 px-5 hover:text-[#b9f3b9] hover:border-[#b9f3b9] ">
+            
               Shop Now
-            </a>
+            
           </Link>
         </div>
       </div>
