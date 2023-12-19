@@ -9,7 +9,8 @@ const Footer1 = () => {
           <div className="cursor-pointer mb-4">
             <Link
               href="/"
-              className="text-xl md:text-3xl lg:text-4xl font-playfairDisplay text-PB_black tracking-wide">
+              className="text-xl md:text-3xl lg:text-4xl font-playfairDisplay text-PB_black tracking-wide"
+              legacyBehavior>
               Pure<span className="font-semibold font-inter text-PB_darkGreen">
                 Beauty
               </span>

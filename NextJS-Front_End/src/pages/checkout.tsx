@@ -131,7 +131,8 @@ const Checkout = () => {
                           <h3 className="text-xs sm:text-sm w-36 md:w-56 leading-relaxed ">
                             <Link
                               href={`/products/${items[0]?.slug.current}`}
-                              className="font-medium text-PB_black hover:text-PB_blue">
+                              className="font-medium text-PB_black hover:text-PB_blue"
+                              legacyBehavior>
 
                               {items[0]?.title}
 
@@ -254,7 +255,8 @@ const Checkout = () => {
                     or{" "}
                     <Link
                       href={`/products`}
-                      className="text-PB_blue font-medium hover:text-indigo-500">
+                      className="text-PB_blue font-medium hover:text-indigo-500"
+                      legacyBehavior>
                       Continue Shopping<span aria-hidden="true"> &rarr;</span>
 
                     </Link>

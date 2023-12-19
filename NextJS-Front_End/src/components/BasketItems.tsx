@@ -44,7 +44,10 @@ const BasketItems = () => {
         </div>
 
         <button className="bg-PB_black text-PB_white w-full py-1 rounded-lg mt-6 flex justify-center items-center align-middle hover:bg-[#161515] shadow-md transition duration-100">
-          <Link href="checkout" className="font-inter font-medium tracking-wide">
+          <Link
+            href="checkout"
+            className="font-inter font-medium tracking-wide"
+            legacyBehavior>
 
             <BsHandbag className="mr-2 mb-1 inline" />Place Order
           </Link>
